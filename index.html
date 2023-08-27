@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body class='toDoList'>
+        <div class = 'register-button'>
+            <button id = 'button1'>Add to Do</button>
+        </div>
+        <div class='modalWindowWrapper'>
+            <form class = 'windowForm'>
+                <header class='formHeader'>
+                    <h2 class='headerH2'>Add to Do</h2>
+                    <button class='closeButton' id = 'formCloseButton'>&times;</button>
+                </header>
+                    <label class = 'formLabels'>Title:
+                        <input class = 'validate' id = 'titleInput' placeholder='Enter title'>
+                    </label> 
+                    <label class = 'formLabels'>Description:
+                        <input class = 'validate' id = 'descriptionInput' placeholder='Enter description'>
+                    </label>
+                    <button class = 'submitButton'>Submit</button>
+            </form>
+            </div>
+        </div>
+        <div class='modalEditWindowWrapper'>
+            <form class = 'editWindowForm'>
+                <header class='editFormHeader'>
+                    <h2 class='headerH2'>Edit</h2>
+                    <button class='closeButton' id = 'editFormCloseButton'>&times;</button>
+                </header>
+                    <label class = 'formLabels'>Edit title:
+                        <input class = 'validate' id = 'editTitleInput' placeholder='Enter title'>
+                    </label> 
+                    <label class = 'formLabels'>Edit description:
+                        <input class = 'validate' id = 'editDescriptionInput' placeholder='Enter description'>
+                    </label>
+                    <button class = 'editSubmitButton'>Edit</button>
+            </form>
+        </div>
+        <div class = 'box-containers'>
+            <div class = 'box-container1'>
+                <h1>To Do</h1>
+                <ul class = 'list' id = 'toDo'></ul>
+            </div>
+            <div class = 'box-container2'>
+                <h1>In Progress</h1>
+                <ul class = 'list' id = 'inProgress'></ul>
+            </div>
+            <div class = 'box-container3'>
+                <h1>Done</h1>
+                <ul class = 'list' id = 'done'></ul>
+            </div>
+            <div class = 'box-container4'>
+                <div class = 'delete-div'>
+                    <h1>Deleted</h1>
+                    <button class='clearAllButton'>Clear All</button>
+                </div>
+                <ul class = 'list' id = 'deleted'></ul>
+            </div>
+        </div>
+        <script type='module' src='./index.js'></script>
+    </body>
+</html>

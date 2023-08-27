@@ -1,0 +1,229 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap');
+
+.toDoList {
+    font-family: Ubuntu, cursive;
+    background-color: rgb(61, 57, 63);
+}
+
+.register-button {
+    display: flex;
+    justify-content: center;
+}
+
+#button1{
+    width: 100px;
+    height: 30px;
+    display: flex;
+    border: none;
+    border-radius: 5px;
+    background-color: rgb(236, 151, 102);
+    padding: 3px 6px 0px 8px;
+    font-size: 19px;
+    font-family: Ubuntu, cursive;
+    color: rgb(250, 231, 193);
+    font-weight: 600;
+}
+
+.closeButton{
+    width: 30px;
+    height: 30px;
+    border: none;
+    background-color: transparent;
+    font-size: 24px;
+}
+
+.modalWindowWrapper, 
+.modalEditWindowWrapper {
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 1;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4); 
+}
+
+.windowForm, 
+.editWindowForm {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    max-width: 360px;
+    min-width: 280px;
+    padding: 20px;
+    border: 1px solid black;
+    border-radius: 6px;
+    background-color: rgb(236, 151, 102);
+    color: rgb(250, 231, 193);
+}
+
+.formHeader,
+.editFormHeader{ 
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.formLabels {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.closeButton{
+    font-size: 28px;
+    color: rgb(250, 231, 193);
+}
+
+.closeButton:hover {
+    color: rgb(61, 57, 63);
+    cursor: pointer;
+}
+
+.box-containers {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+
+.box-containers h1{
+    color: rgb(236, 151, 102)
+}
+
+.box-container1, 
+.box-container2, 
+.box-container3, 
+.box-container4{
+    display: flex;
+    flex-direction: column;
+    word-wrap: break-word;
+}
+
+#toDo, 
+#inProgress, 
+#done, 
+#deleted{
+    display: flex;
+    flex-direction: column;
+    border: 2px solid rgb(250, 231, 193);
+    border-radius: 4px;
+    padding: 10px;
+    width: 300px;
+    min-height: 198px;
+    gap: 20px;
+}
+
+#titleInput, 
+#descriptionInput, 
+#editDescriptionInput, 
+#editTitleInput {
+    outline: none;
+    border: 2px solid grey;
+    border-radius: 5px;
+    background-color: rgb(250, 231, 193);
+    font-family: Ubuntu, cursive;
+}
+
+#titleInput:hover, 
+#descriptionInput:hover, 
+#editDescriptionInput:hover, 
+#editTitleInput:hover,
+.submitButton:hover, 
+.editSubmitButton:hover {
+    background-color: rgb(247, 221, 175);
+}
+
+.submitButton, 
+.editSubmitButton {
+    outline: none;
+    border: 2px solid rgb(61, 60, 60);
+    border-radius: 5px;
+    background-color: rgb(250, 231, 193);
+    font-family: Ubuntu, cursive;
+}
+
+.editButton, 
+.nextButton, 
+.backButton, 
+.deleteButton, 
+.restoreButton {
+    width: 50px;
+    height: 20px;
+    font-family: Ubuntu, cursive;
+    background-color: rgb(236, 151, 102);
+    border: none;
+    border-radius: 3px;
+    font-weight: 600;
+    color: rgb(61, 60, 60);
+    font-size: 15px;
+}
+
+#button1:hover, 
+.editButton:hover, 
+.nextButton:hover, 
+.backButton:hover, 
+.deleteButton:hover, 
+.restoreButton:hover,
+.clearAllButton:hover {
+    background-color: rgb(235, 133, 74);
+}
+
+.deleteButton {
+    margin-left: 62px;
+    width: 60px;
+    height: 20px;
+}
+
+.restoreButton {
+    width: 66px;
+    height: 20px;
+}
+
+.delete-div{
+    display: flex;
+    gap: 15px;
+    align-items:center;
+}
+
+.clearAllButton{
+    font-family: Ubuntu, cursive;
+    height: 25px;
+    border: none;
+    border-radius: 5px;
+    background-color: rgb(236, 151, 102);
+    color: rgb(250, 231, 193);
+    font-weight: 600;
+}
+
+
+.card{
+    border: 2px solid rgb(250, 231, 193);
+    border-radius: 4px;
+    list-style-type: none;
+    padding: 6px;
+    padding-bottom: 8px;
+}
+
+.card span, 
+.card p{
+    color: rgb(236, 151, 102);
+    font-weight: 600;
+    max-width: 284px;
+}
+
+.title, .card-id, 
+.description {
+    margin-top: 2px;
+}
+
+p {
+    display: block;
+    margin-block-start: 0.61em;
+    margin-block-end: 0.61em;
+}
+
+input:-internal-autofill-selected {
+}
