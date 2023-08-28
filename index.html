@@ -7,8 +7,9 @@
         <link rel="stylesheet" href="style.css">
     </head>
     <body class='toDoList'>
-        <div class = 'register-button'>
-            <button id = 'button1'>Add to Do</button>
+        <div class = 'register-buttons'>
+            <button class = 'addButton'>Add to Do</button>
+            <button class = 'findButton'>Find Card</button>
         </div>
         <div class='modalWindowWrapper'>
             <form class = 'windowForm'>
@@ -17,10 +18,10 @@
                     <button class='closeButton' id = 'formCloseButton'>&times;</button>
                 </header>
                     <label class = 'formLabels'>Title:
-                        <input class = 'validate' id = 'titleInput' placeholder='Enter title'>
+                        <input id = 'titleInput' placeholder='Enter title'>
                     </label> 
                     <label class = 'formLabels'>Description:
-                        <input class = 'validate' id = 'descriptionInput' placeholder='Enter description'>
+                        <input id = 'descriptionInput' placeholder='Enter description'>
                     </label>
                     <button class = 'submitButton'>Submit</button>
             </form>
@@ -33,12 +34,28 @@
                     <button class='closeButton' id = 'editFormCloseButton'>&times;</button>
                 </header>
                     <label class = 'formLabels'>Edit title:
-                        <input class = 'validate' id = 'editTitleInput' placeholder='Enter title'>
+                        <input id = 'editTitleInput' placeholder='Enter title'>
                     </label> 
                     <label class = 'formLabels'>Edit description:
-                        <input class = 'validate' id = 'editDescriptionInput' placeholder='Enter description'>
+                        <input id = 'editDescriptionInput' placeholder='Enter description'>
                     </label>
                     <button class = 'editSubmitButton'>Edit</button>
+            </form>
+        </div>
+        <div class='modalFindWindowWrapper'>
+            <form class='findWindowForm'>
+                <header class='findFormHeader'>
+                    <h2 class='headerH2'>Find</h2>
+                    <button class='closeButton' id = 'formCloseButton'>&times;</button>
+                </header>
+                <label class = 'formLabels'>Find card:
+                    <input id = 'findInput' placeholder='Enter symbols/title of the card'>
+                </label> 
+                <p class='note'>Note:</p>
+                <p class='note-description'>The card(s) is searched for 
+                    by the first entered character, in case of a title 
+                    match, cards whose title matched are displayed.</p>
+                <button class = 'findSubmitButton'>Find</button>
             </form>
         </div>
         <div class = 'box-containers'>

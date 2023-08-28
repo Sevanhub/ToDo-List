@@ -5,12 +5,15 @@
     background-color: rgb(61, 57, 63);
 }
 
-.register-button {
+.register-buttons {
     display: flex;
-    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
 }
 
-#button1{
+.addButton,
+.findButton {
     width: 100px;
     height: 30px;
     display: flex;
@@ -33,7 +36,8 @@
 }
 
 .modalWindowWrapper, 
-.modalEditWindowWrapper {
+.modalEditWindowWrapper,
+.modalFindWindowWrapper {
     position: fixed;
     left: 0;
     top: 0;
@@ -47,7 +51,8 @@
 }
 
 .windowForm, 
-.editWindowForm {
+.editWindowForm,
+.findWindowForm {
     display: flex;
     flex-direction: column;
     gap: 18px;
@@ -60,8 +65,13 @@
     color: rgb(250, 231, 193);
 }
 
+.findWindowForm {
+    gap: 0px;
+}
+
 .formHeader,
-.editFormHeader{ 
+.editFormHeader,
+.findFormHeader{ 
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -119,7 +129,8 @@
 #titleInput, 
 #descriptionInput, 
 #editDescriptionInput, 
-#editTitleInput {
+#editTitleInput,
+#findInput {
     outline: none;
     border: 2px solid grey;
     border-radius: 5px;
@@ -131,18 +142,25 @@
 #descriptionInput:hover, 
 #editDescriptionInput:hover, 
 #editTitleInput:hover,
+#findInput:hover,
 .submitButton:hover, 
-.editSubmitButton:hover {
+.editSubmitButton:hover,
+.findSubmitButton:hover {
     background-color: rgb(247, 221, 175);
 }
 
 .submitButton, 
-.editSubmitButton {
+.editSubmitButton,
+.findSubmitButton {
     outline: none;
     border: 2px solid rgb(61, 60, 60);
     border-radius: 5px;
     background-color: rgb(250, 231, 193);
     font-family: Ubuntu, cursive;
+}
+
+.findSubmitButton {
+    margin-top: 14px;
 }
 
 .editButton, 
@@ -161,13 +179,14 @@
     font-size: 15px;
 }
 
-#button1:hover, 
+.addButton:hover, 
 .editButton:hover, 
 .nextButton:hover, 
 .backButton:hover, 
 .deleteButton:hover, 
 .restoreButton:hover,
-.clearAllButton:hover {
+.clearAllButton:hover,
+.findButton:hover {
     background-color: rgb(235, 133, 74);
 }
 
@@ -219,9 +238,22 @@
     margin-top: 2px;
 }
 
+.note {
+    margin-bottom: 2px;
+}
+
+.note-description {
+    font-size: 12px;
+    margin-left: 2px;
+}
+
 p {
     display: block;
     margin-block-start: 0.61em;
     margin-block-end: 0.61em;
 }
 
+input:-webkit-autofill {
+    -webkit-text-fill-color: rgb(61, 57, 63);
+    -webkit-box-shadow: 0 0 0px 1000px rgb(250, 231, 193) inset;
+}

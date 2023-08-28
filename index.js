@@ -9,6 +9,7 @@ import cardsDeleting from './helpers/toDo/cardsDeleting.js'
 import cardTransfering from './helpers/toDo/cardTransfering.js'
 import cardTransferingBack from './helpers/toDo/cardTransferingBack.js'
 import cardDrawing from './helpers/toDo/cardDrawing.js'
+import cardFinding from './helpers/toDo/cardFinding.js'
 
 const init = () => {
   const modalWindowEl = document.querySelector('.modalWindowWrapper')
@@ -16,7 +17,7 @@ const init = () => {
   const toDoContainerEl = document.querySelector('.box-containers')
 
   const btnCloseEl = document.querySelector('#formCloseButton')
-  const btnOpenEl = document.querySelector('#button1')
+  const btnOpenEl = document.querySelector('.addButton')
 
   const todos = localStorage.getItem('todos') 
       ? JSON.parse(localStorage.getItem('todos'))
@@ -54,6 +55,9 @@ const init = () => {
         break
       case[...eventTarget.classList].includes('editButton'):
         cardEditing(eventTarget, todos)
+        break
+      case[...eventTarget.classList].includes('findButton'):
+        cardFinding(eventTarget, todos)
         break
     } 
   })
